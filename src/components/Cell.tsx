@@ -5,7 +5,7 @@ interface CellProps {
 }
 
 const Cell: FunctionComponent<CellProps> = ({ type }) => {
-  return <div>CELL: ${type}</div>
+  return <div>CELL: {type}</div>
 }
 
 export default Cell
