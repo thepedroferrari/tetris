@@ -1,6 +1,7 @@
+export const foo = 'foo'
+/*
 import { useEffect, useRef } from 'react'
-
-/* export function useInterval(callback: object, delay: number) {
+ export function useInterval(callback: object, delay: number) {
   interface savedCallback {
     current: object
   }

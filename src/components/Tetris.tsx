@@ -1,5 +1,8 @@
 import React, { FunctionComponent } from 'react'
 
+// Functions
+import { createStage } from '../lib/gameHelpers'
+
 // Components
 import Display from './Display'
 import Stage from './Stage'
@@ -9,7 +12,7 @@ interface Props {}
 const Tetris: FunctionComponent<Props> = () => {
   return (
     <>
-      <Stage stage="string" />
+      <Stage stage={createStage()} />
       <aside>
         <Display text="Score" gameOver={false} />
         <Display text="Rows" gameOver={false} />

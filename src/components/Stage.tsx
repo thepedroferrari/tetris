@@ -1,11 +1,17 @@
 import React, { FunctionComponent } from 'react'
 
-import Cell from './Cell'
+import Cell from './Cell/Cell'
 
 interface Props {
-  stage: string
+  stage: any[][]
 }
 
-const Stage: FunctionComponent<Props> = ({ stage }) => <Cell type="block" />
+const Stage: FunctionComponent<Props> = ({ stage }) => {
+  return (
+    <div>
+      {stage.map(row => row.map((cell, i) => <Cell type={cell[0]} key={i} />))}
+    </div>
+  )
+}
 
 export default Stage
