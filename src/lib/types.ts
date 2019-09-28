@@ -1,11 +1,16 @@
+export enum STAGE {
+  WIDTH = 12,
+  HEIGHT = 20
+}
+
 export interface color {
-  R: number
-  G: number
-  B: number
+  R: number | undefined
+  G: number | undefined
+  B: number | undefined
 }
 
 export interface Tetromino {
-  shape: Array<Array<number>>
+  shape: number[][]
   color: color
 }
 

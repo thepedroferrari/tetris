@@ -7,25 +7,27 @@ import { TETROMINOS } from '../../lib/tetrominos'
 
 interface CellProps {
   type: string
-  R: color['R'] | undefined
-  G: color['G'] | undefined
-  B: color['B'] | undefined
+  color: color
 }
 
 const paintTetromino = (
   tetromino: string,
-  R: CellProps['R'] = undefined,
-  G: CellProps['G'] = undefined,
-  B: CellProps['B'] = undefined
-) =>
-  `${R || TETROMINOS[tetromino].color.R},
-   ${G || TETROMINOS[tetromino].color.G},
-   ${B || TETROMINOS[tetromino].color.B}`
+  R: CellProps['color']['R'] = undefined,
+  G: CellProps['color']['G'] = undefined,
+  B: CellProps['color']['B'] = undefined
+) => ({
+  R: R || 0,
+  G: G || 0,
+  B: B || 0
+})
 
-const Cell: FunctionComponent<CellProps> = ({ type, R, G, B }) => {
+const Cell: FunctionComponent<CellProps> = ({ type, color }) => {
   return (
-    <StyledCell type={type} color={paintTetromino(TETROMINOS[type], R, G, B)}>
-      CELL: {type}
+    <StyledCell>
+      <Cell
+        type={type}
+        color={paintTetromino(TETROMINOS[type], color.R, color.G, color.B)}
+      />
     </StyledCell>
   )
 }

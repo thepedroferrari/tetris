@@ -1,9 +1,7 @@
-export enum STAGE {
-  WIDTH = 12,
-  HEIGHT = 20
-}
+import { STAGE } from './types'
 
-export const createStage = () =>
-  Array.from(Array(STAGE.HEIGHT), () =>
-    new Array(STAGE.WIDTH).fill([0, 'clear'])
-  )
+const stageWidth = STAGE.WIDTH
+const stageHeight = STAGE.HEIGHT
+
+export const createStage = (): (string | number)[][] =>
+  Array.from(Array(stageHeight), () => new Array(stageWidth).fill([0, 'clear']))
