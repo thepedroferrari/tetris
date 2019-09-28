@@ -27,10 +27,7 @@
     "noUnusedLocals": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "rootDirs": [
-      "src",
-      "src/components/stories"
-    ],
+    "rootDirs": ["src", "src/components/stories"],
     "baseUrl": "src",
     "module": "esnext",
     "moduleResolution": "node",
@@ -42,12 +39,8 @@
   "include": [
     "src",
     "src/**/*",
-    "src/components/stories/Cell.stories.tsx",
+    "src/components/Cell/Cell.stories.tsx",
     "src/components/stories"
   ],
-  "exclude": [
-    "node_modules",
-    "build",
-    "scripts"
-  ]
+  "exclude": ["node_modules", "build", "scripts"]
 }

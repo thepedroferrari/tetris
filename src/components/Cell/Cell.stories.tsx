@@ -1,7 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 
-import Cell from '../Cell/Cell'
+import Cell from './Cell'
 
 storiesOf('Cell', module)
   .add('Tetromino 0', () => <Cell type="0" />)
