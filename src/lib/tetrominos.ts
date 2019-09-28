@@ -4,11 +4,7 @@ import { Tetrominos } from '../lib/types'
 export const TETROMINOS: Tetrominos = {
   0: {
     shape: [[0]],
-    color: {
-      R: 0,
-      G: 0,
-      B: 0
-    }
+    color: '0, 0, 0'
   },
   I: {
     shape: [
@@ -17,11 +13,7 @@ export const TETROMINOS: Tetrominos = {
       [0, 1, 0, 0],
       [0, 1, 0, 0]
     ],
-    color: {
-      R: 90,
-      G: 230,
-      B: 240
-    }
+    color: '240, 30, 40'
   },
   J: {
     shape: [
@@ -29,11 +21,7 @@ export const TETROMINOS: Tetrominos = {
       [0, 1, 0],
       [1, 1, 0]
     ],
-    color: {
-      R: 35,
-      G: 95,
-      B: 225
-    }
+    color: '35, 95, 225'
   },
   L: {
     shape: [
@@ -41,22 +29,14 @@ export const TETROMINOS: Tetrominos = {
       [0, 1, 0],
       [0, 1, 1]
     ],
-    color: {
-      R: 225,
-      G: 175,
-      B: 35
-    }
+    color: '225, 175, 35'
   },
   O: {
     shape: [
       [1, 1],
       [1, 1]
     ],
-    color: {
-      R: 225,
-      G: 215,
-      B: 35
-    }
+    color: '225, 215, 35'
   },
   S: {
     shape: [
@@ -64,11 +44,7 @@ export const TETROMINOS: Tetrominos = {
       [1, 1, 0],
       [0, 0, 0]
     ],
-    color: {
-      R: 50,
-      G: 210,
-      B: 55
-    }
+    color: '50, 210, 55'
   },
   T: {
     shape: [
@@ -76,11 +52,7 @@ export const TETROMINOS: Tetrominos = {
       [1, 1, 1],
       [0, 1, 0]
     ],
-    color: {
-      R: 130,
-      G: 60,
-      B: 200
-    }
+    color: '130, 60, 200'
   },
   Z: {
     shape: [
@@ -88,11 +60,7 @@ export const TETROMINOS: Tetrominos = {
       [0, 1, 1],
       [0, 0, 0]
     ],
-    color: {
-      R: 225,
-      G: 80,
-      B: 80
-    }
+    color: '225, 80, 80'
   },
 
 }

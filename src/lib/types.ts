@@ -4,14 +4,14 @@ export enum STAGE {
 }
 
 export interface color {
-  R: number | undefined
-  G: number | undefined
-  B: number | undefined
+  R: number
+  G: number
+  B: number
 }
 
 export interface Tetromino {
   shape: number[][]
-  color: color
+  color: string
 }
 
 export interface Tetrominos {
