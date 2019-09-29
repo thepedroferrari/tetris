@@ -1,19 +1,17 @@
-export const foo = 'foo'
-/*
 import { useEffect, useRef } from 'react'
- export function useInterval(callback: object, delay: number) {
+export function useInterval(callback: object, delay: number) {
   interface savedCallback {
     current: object
   }
 
-  const savedCallback = useRef()
+  const savedCallback: any = useRef()
   // Remember the latest callback.
   useEffect(() => {
     savedCallback.current = callback
   }, [callback])
 
   // Set up the interval.
-  useEffect(() => {
+  useEffect((): any => {
     function tick() {
       savedCallback.current()
     }
@@ -24,4 +22,4 @@ import { useEffect, useRef } from 'react'
       }
     }
   }, [delay])
-} */
+}

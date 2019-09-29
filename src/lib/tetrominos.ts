@@ -1,4 +1,4 @@
-import { Tetrominos } from '../lib/types'
+import { Tetrominos } from 'lib/types'
 
 // prettier-ignore
 export const TETROMINOS: Tetrominos = {
@@ -67,7 +67,7 @@ export const TETROMINOS: Tetrominos = {
 
 const tetrominos: string = Object.keys(TETROMINOS).join('')
 
-export const selectRandomTetromino = () => {
+export const getRandomTetromino = () => {
   const randomTetromino =
     tetrominos[Math.floor(Math.random() * tetrominos.length)]
 

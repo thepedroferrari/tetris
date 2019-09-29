@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import * as css from '../../lib/cssVariables'
+import * as css from 'lib/cssVariables'
 
 interface Props {
   width: string

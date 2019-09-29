@@ -24,3 +24,15 @@ export interface Tetrominos {
   T: Tetromino
   Z: Tetromino
 }
+
+export interface Position {
+  x: number
+  y: number
+}
+
+export interface PlayerStage {
+  collided: Boolean
+  pos: Position
+  stage: (number | string)[][]
+  tetromino: number[][]
+}
