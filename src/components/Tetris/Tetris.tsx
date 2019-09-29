@@ -1,17 +1,19 @@
 import React, { FunctionComponent } from 'react'
 
 // Functions
-import { createStage } from '../lib/gameHelpers'
+import { createStage } from '../../lib/gameHelpers'
 
 // Components
-import Display from './Display'
-import Stage from './Stage'
-import StartButton from './StartButton'
+import Display from '../Display/Display'
+import Stage from '../Stage/Stage'
+import StartButton from '../StartButton/StartButton'
 
-interface Props {}
-const Tetris: FunctionComponent<Props> = () => {
-  return (
-    <>
+// Styles
+import { StyledTetrisWrapper, StyledTetris } from './Tetris.styles'
+
+const Tetris: FunctionComponent = () => (
+  <StyledTetrisWrapper>
+    <StyledTetris>
       <Stage stage={createStage()} />
       <aside>
         <Display text="Score" gameOver={false} />
@@ -19,8 +21,8 @@ const Tetris: FunctionComponent<Props> = () => {
         <Display text="Level" gameOver={false} />
         <StartButton callback={true} />
       </aside>
-    </>
-  )
-}
+    </StyledTetris>
+  </StyledTetrisWrapper>
+)
 
 export default Tetris

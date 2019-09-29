@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from 'react'
 
-import { StyledCell } from './styles'
+import { StyledCell } from './Cell.styles'
 import { TETROMINOS } from '../../lib/tetrominos'
 
 interface CellProps {
@@ -8,9 +8,7 @@ interface CellProps {
 }
 
 const Cell: FunctionComponent<CellProps> = ({ type }) => (
-  <StyledCell type={type} color={TETROMINOS[type].color}>
-    Cell
-  </StyledCell>
+  <StyledCell type={type} color={TETROMINOS[type].color} />
 )
 
 export default Cell

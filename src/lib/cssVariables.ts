@@ -1,0 +1,9 @@
+export const backgroundColor = '#2b2b2b'
+export const stageBackgroundColor = 'darkblue'
+export const displayBackgroundColor = '#000'
+export const borderColor = backgroundColor
+export const borderWidth = '4px'
+export const errorColor = 'tomato'
+export const buttonDefaultColor = '#999'
+export const fontFamily = 'Pixel, Arial, Helvetica, sans-serif'
+export const defaultMargin = '0 0 20px 0'

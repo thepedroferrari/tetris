@@ -1,4 +1,5 @@
 import React, { FunctionComponent } from 'react'
+import { StyledDisplay } from './Display.styles'
 
 interface Props {
   gameOver: boolean
@@ -6,7 +7,7 @@ interface Props {
 }
 
 const Display: FunctionComponent<Props> = ({ gameOver, text }) => (
-  <div>{text}</div>
+  <StyledDisplay gameOver={gameOver}>{text}</StyledDisplay>
 )
 
 export default Display
