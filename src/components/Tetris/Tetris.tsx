@@ -10,22 +10,62 @@ import { usePlayer } from 'hooks/usePlayer'
 import { useStage } from 'hooks/useStage'
 
 // Functions
-import { createStage } from 'lib/gameHelpers'
+import { createStage, defaultStage } from 'lib/gameHelpers'
 
 // Styles
 import { StyledTetrisWrapper, StyledTetris } from './Tetris.styles'
+
+// Types
+import { KEYCODES } from 'lib/types'
 
 const Tetris: FunctionComponent = () => {
   const [dropTime, setDropTime] = useState(null)
   const [gameOver, setGameOver] = useState(false)
 
-  const [player] = usePlayer()
-  const [stage, setStage] = useState(player)
+  const [player, updatePlayerPos, resetPlayer] = usePlayer()
+  const [stage, setStage] = useStage(player, resetPlayer)
 
   console.log('re-rendering')
   console.log(stage)
+
+  const movePlayer = (dir: any) => {
+    updatePlayerPos({ x: dir, y: 0 })
+  }
+
+  const startGame = () => {
+    // Reset everything
+    setStage({ ...defaultStage })
+    resetPlayer()
+  }
+
+  const drop = () => {
+    updatePlayerPos({ x: 0, y: 1, collided: false })
+  }
+
+  const dropPlayer = () => {
+    drop()
+  }
+
+  const move = (keyCode: number) => {
+    switch (keyCode) {
+      case KEYCODES.LEFT:
+        movePlayer(-1)
+        break
+      case KEYCODES.RIGHT:
+        movePlayer(1)
+        break
+      case KEYCODES.DOWN:
+        dropPlayer()
+        break
+    }
+  }
+
   return (
-    <StyledTetrisWrapper>
+    <StyledTetrisWrapper
+      role="button"
+      tabIndex="0"
+      onKeyDown={(e: React.KeyboardEvent<HTMLDivElement>) => move(e.keyCode)}
+    >
       <StyledTetris>
         <Stage
           collided={stage.collided}
@@ -43,7 +83,7 @@ const Tetris: FunctionComponent = () => {
               <Display text="Level" gameOver={gameOver} />
             </>
           )}
-          <StartButton callback={true} />
+          <StartButton callback={startGame} />
         </aside>
       </StyledTetris>
     </StyledTetrisWrapper>

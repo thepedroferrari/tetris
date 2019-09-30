@@ -3,7 +3,7 @@ import React, { FunctionComponent } from 'react'
 import { StyledStartButton } from './StartButton.styles'
 
 interface Props {
-  callback: boolean
+  callback: () => void
 }
 
 const StartButton: FunctionComponent<Props> = ({ callback }) => (
