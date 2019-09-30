@@ -1,7 +1,7 @@
-import { Tetrominos } from 'lib/types'
+import { ColoredTetrominos } from 'lib/types'
 
 // prettier-ignore
-export const TETROMINOS: Tetrominos = {
+export const TETROMINOS: ColoredTetrominos = {
   0: {
     shape: [[0]],
     color: '0, 0, 0'
