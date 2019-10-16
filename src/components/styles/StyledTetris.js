@@ -1,23 +1,16 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
+// BG Image
+import bgImage from '../../img/bg.png';
 
-import bgImage from 'img/bg.png'
-
-interface Props {
-  width: string
-  background: string
-  type: number
-  color: string
-  border: string
-}
-
-export const StyledTetrisWrapper: any = styled.div<Props>`
+export const StyledTetrisWrapper = styled.div`
   width: 100vw;
   height: 100vh;
   background: url(${bgImage}) #000;
   background-size: cover;
   overflow: hidden;
-`
-export const StyledTetris: any = styled.div<Props>`
+`;
+
+export const StyledTetris = styled.div`
   display: flex;
   align-items: flex-start;
   padding: 40px;
@@ -30,4 +23,4 @@ export const StyledTetris: any = styled.div<Props>`
     display: block;
     padding: 0 20px;
   }
-`
+`;

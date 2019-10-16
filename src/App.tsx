@@ -1,7 +1,7 @@
 import React from 'react'
-import Tetris from './components/Tetris/Tetris'
+import Tetris from 'components/Tetris'
 
-const App: React.FC = () => (
+const App = () => (
   <div className="App">
     <Tetris />
   </div>
